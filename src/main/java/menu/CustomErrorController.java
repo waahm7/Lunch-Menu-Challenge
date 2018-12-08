@@ -24,17 +24,17 @@ public class CustomErrorController extends AbstractErrorController {
         return buildErrorMessage(errorAttributes);
     }
 
-    public Map<String,Object> buildErrorMessage(Map<String, Object> errorAttributes){
+    public Map<String, Object> buildErrorMessage(Map<String, Object> errorAttributes) {
 
-        if(errorAttributes.containsKey("trace"))
+        if (errorAttributes.containsKey("trace"))
             errorAttributes.remove("trace");
-        if(errorAttributes.containsKey("timestamp"))
+        if (errorAttributes.containsKey("timestamp"))
             errorAttributes.remove("timestamp");
-        if(errorAttributes.containsKey("path"))
+        if (errorAttributes.containsKey("path"))
             errorAttributes.remove("path");
 
-        if((int)errorAttributes.get("status")==404)
-            errorAttributes.put("message","page does not exist");
+        if ((int) errorAttributes.get("status") == 404)
+            errorAttributes.put("message", "page does not exist");
 
         return errorAttributes;
 

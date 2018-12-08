@@ -2,11 +2,12 @@ package menu;
 
 import java.util.ArrayList;
 
-public  class Menu {
-    ArrayList<Dish> dishes;
-
+public class Menu {
+    private ArrayList<Dish> dishes;
     Menu() {
+
         dishes = new ArrayList<>();
+
     }
 
     void insertDish(Dish dish) {

@@ -1,11 +1,12 @@
 package menu;
 
-public  class Dish {
+public class Dish {
 
-    String type, description, addons;
-
+    private String type;
+    private String description;
+    private String addons;
     //keeping it as String to preserve €
-    String price;
+    private String price;
 
     Dish(String type, String description, String addons, String price) {
         this.type = type;
