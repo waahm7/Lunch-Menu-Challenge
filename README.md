@@ -1,5 +1,6 @@
 # Lunch-Menu-Challenge
 It uses Spring boot library and Jsoup to scrap today's menu from https://www.cobie.de/speisekarte and display it in a JSON format.
+Click [this](https://lunch-menu-challenge.herokuapp.com/menu/day) to see today's menu.
 
 # Running it with IntelliJ IDEA
 1. git clone https://github.com/waahm7/Lunch-Menu-Challenge.git
