@@ -13,7 +13,7 @@ public class MenuController {
 
     @RequestMapping("/menu/day")
     public Menu getMenu() {
-        return fetcher.fetchMenu();
+        return fetcher.fetchMenu("https://www.cobie.de/speisekarte");
     }
 
 }

@@ -15,9 +15,9 @@ public class MenuFetcher {
 
     private final String CONNECTION_ERROR_MESSAGE = "Unable to connect to website";
     private final String FETCH_ERROR_MESSAGE = "Unable to fetch data from website, Maybe the website has changed.";
-    private final String WEBSITE_URL = "https://www.cobie.de/speisekarte";
+    //private final String WEBSITE_URL = "https://www.cobie.de/speisekarte";
 
-    public Menu fetchMenu() {
+    public Menu fetchMenu(String WEBSITE_URL) {
         Document doc = null;
 
         try {
