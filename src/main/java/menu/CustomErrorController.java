@@ -24,7 +24,7 @@ public class CustomErrorController extends AbstractErrorController {
         return buildErrorMessage(errorAttributes);
     }
 
-    public Map<String, Object> buildErrorMessage(Map<String, Object> errorAttributes) {
+    private Map<String, Object> buildErrorMessage(Map<String, Object> errorAttributes) {
 
         errorAttributes.remove("trace");
         errorAttributes.remove("timestamp");
@@ -39,7 +39,6 @@ public class CustomErrorController extends AbstractErrorController {
 
     @Override
     public String getErrorPath() {
-
         return "/error";
     }
 }

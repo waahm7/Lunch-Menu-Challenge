@@ -56,9 +56,7 @@ public class MenuFetcher {
             String price = dishPrice.get(i - 1).text();
             String description = dishDescription.get(i - 1).text().replace("\"", "");
 
-            Dish dish = new Dish(type, description, allergies, price);
-
-            menu.insertDish(dish);
+            menu.addDish(new Dish(type, description, allergies, price));
         }
 
         return menu;

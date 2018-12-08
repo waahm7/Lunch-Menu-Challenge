@@ -1,27 +1,16 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Menu {
-    private ArrayList<Dish> dishes;
-    public Menu() {
+    private List<Dish> dishes=new ArrayList<>();
 
-        dishes = new ArrayList<>();
-
-    }
-
-    public void insertDish(Dish dish) {
+    public void addDish(Dish dish) {
         dishes.add(dish);
     }
 
-    public void printMenu() {
-        for (Dish dish : dishes) {
-            dish.printDish();
-            System.out.println();
-        }
-    }
-
-    public ArrayList<Dish> getDishes() {
+    public List<Dish> getDishes() {
         return dishes;
     }
 

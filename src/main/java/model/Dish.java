@@ -15,13 +15,6 @@ public class Dish {
         this.allergies = allergies;
     }
 
-    public void printDish() {
-        System.out.println("type: " + type);
-        System.out.println("Desciprtion: " + description);
-        System.out.println("allergies: " + allergies);
-        System.out.println("price: " + price);
-    }
-
     public String getType() {
         return type;
     }
