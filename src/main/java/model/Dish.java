@@ -1,24 +1,24 @@
-package menu;
+package model;
 
 public class Dish {
 
     private String type;
     private String description;
-    private String addons;
+    private String alergies;
     //keeping it as String to preserve €
     private String price;
 
-    Dish(String type, String description, String addons, String price) {
+    public Dish(String type, String description, String alergies, String price) {
         this.type = type;
         this.price = price;
         this.description = description;
-        this.addons = addons;
+        this.alergies = alergies;
     }
 
-    void printDish() {
+    public void printDish() {
         System.out.println("type: " + type);
         System.out.println("Desciprtion: " + description);
-        System.out.println("addons: " + addons);
+        System.out.println("alergies: " + alergies);
         System.out.println("price: " + price);
     }
 
@@ -38,12 +38,12 @@ public class Dish {
         this.description = description;
     }
 
-    public String getAddons() {
-        return addons;
+    public String getAlergies() {
+        return alergies;
     }
 
-    public void setAddons(String addons) {
-        this.addons = addons;
+    public void setAlergies(String alergies) {
+        this.alergies = alergies;
     }
 
     public String getPrice() {

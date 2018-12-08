@@ -1,13 +1,13 @@
 package menu;
 
 import com.google.common.base.CharMatcher;
+import model.Dish;
+import model.Menu;
 import org.jsoup.HttpStatusException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
 
@@ -51,12 +51,12 @@ public class MenuFetcher {
             if (link.attr("class").equals("dayheadline"))
                 break;
 
-            String addons = CharMatcher.is(',').or(CharMatcher.digit()).retainFrom(link.text());
+            String alergies = CharMatcher.is(',').or(CharMatcher.digit()).retainFrom(link.text());
             String type = CharMatcher.is(' ').or(CharMatcher.javaLetter()).retainFrom(link.text());
             String price = dishPrice.get(i - 1).text();
             String description = dishDescription.get(i - 1).text().replace("\"", "");
 
-            Dish dish = new Dish(type, description, addons, price);
+            Dish dish = new Dish(type, description, alergies, price);
 
             menu.insertDish(dish);
         }

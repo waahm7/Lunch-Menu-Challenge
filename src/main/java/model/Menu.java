@@ -1,20 +1,20 @@
-package menu;
+package model;
 
 import java.util.ArrayList;
 
 public class Menu {
     private ArrayList<Dish> dishes;
-    Menu() {
+    public sMenu() {
 
         dishes = new ArrayList<>();
 
     }
 
-    void insertDish(Dish dish) {
+    public void insertDish(Dish dish) {
         dishes.add(dish);
     }
 
-    void printMenu() {
+    public void printMenu() {
         for (Dish dish : dishes) {
             dish.printDish();
             System.out.println();

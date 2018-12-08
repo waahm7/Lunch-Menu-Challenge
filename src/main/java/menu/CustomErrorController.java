@@ -26,12 +26,9 @@ public class CustomErrorController extends AbstractErrorController {
 
     public Map<String, Object> buildErrorMessage(Map<String, Object> errorAttributes) {
 
-        if (errorAttributes.containsKey("trace"))
-            errorAttributes.remove("trace");
-        if (errorAttributes.containsKey("timestamp"))
-            errorAttributes.remove("timestamp");
-        if (errorAttributes.containsKey("path"))
-            errorAttributes.remove("path");
+        errorAttributes.remove("trace");
+        errorAttributes.remove("timestamp");
+        errorAttributes.remove("path");
 
         if ((int) errorAttributes.get("status") == 404)
             errorAttributes.put("message", "page does not exist");
