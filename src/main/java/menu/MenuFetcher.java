@@ -51,12 +51,12 @@ public class MenuFetcher {
             if (link.attr("class").equals("dayheadline"))
                 break;
 
-            String alergies = CharMatcher.is(',').or(CharMatcher.digit()).retainFrom(link.text());
+            String allergies = CharMatcher.is(',').or(CharMatcher.digit()).retainFrom(link.text());
             String type = CharMatcher.is(' ').or(CharMatcher.javaLetter()).retainFrom(link.text());
             String price = dishPrice.get(i - 1).text();
             String description = dishDescription.get(i - 1).text().replace("\"", "");
 
-            Dish dish = new Dish(type, description, alergies, price);
+            Dish dish = new Dish(type, description, allergies, price);
 
             menu.insertDish(dish);
         }

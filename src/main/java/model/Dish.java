@@ -4,21 +4,21 @@ public class Dish {
 
     private String type;
     private String description;
-    private String alergies;
+    private String allergies;
     //keeping it as String to preserve €
     private String price;
 
-    public Dish(String type, String description, String alergies, String price) {
+    public Dish(String type, String description, String allergies, String price) {
         this.type = type;
         this.price = price;
         this.description = description;
-        this.alergies = alergies;
+        this.allergies = allergies;
     }
 
     public void printDish() {
         System.out.println("type: " + type);
         System.out.println("Desciprtion: " + description);
-        System.out.println("alergies: " + alergies);
+        System.out.println("allergies: " + allergies);
         System.out.println("price: " + price);
     }
 
@@ -38,12 +38,12 @@ public class Dish {
         this.description = description;
     }
 
-    public String getAlergies() {
-        return alergies;
+    public String getAllergies() {
+        return allergies;
     }
 
-    public void setAlergies(String alergies) {
-        this.alergies = alergies;
+    public void setAllergies(String allergies) {
+        this.allergies = allergies;
     }
 
     public String getPrice() {
