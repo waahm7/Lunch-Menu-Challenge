@@ -42,7 +42,7 @@ public class MenuFetcher {
         if (dishType == null || dishDescription == null || dishPrice == null)
             throw new RuntimeException(FETCH_ERROR_MESSAGE);
 
-        Menu menu = new Menu();
+        Menu menu = new Menu(dishType.get(0).text());
 
         for (int i = 1; i < dishType.size(); i++) {
             Element link = dishType.get(i);
